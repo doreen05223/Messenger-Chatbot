@@ -23,7 +23,7 @@
 ## FSM
 ![fsm](./fsm.png)
 
-##How to Start the Chatbot after push to Heroku
+## How to Start the Chatbot after push to Heroku
 1. open the domain
 2. setting webhook on the website *facebook for developer* (https URL = https://chatbot-f74056190.herokuapp.com/, VERIFY_TOKEN=2325)
 3. start chatbot
