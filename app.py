@@ -1,8 +1,8 @@
 from bottle import route, run, request, abort, static_file
 from fsm import TocMachine
 from utils import send_text_message
-#import os
-#PORT = os.environ['PORT']
+import os
+PORT = os.environ['PORT']
 
 VERIFY_TOKEN = "2325"#"Your Webhook Verify Token"
 machine = TocMachine(
@@ -90,5 +90,5 @@ def show_fsm():
 
 if __name__ == "__main__":
     #show_fsm()
-    #run(host="0.0.0.0", port=PORT, debug=True, reloader=True)
-    run(host="localhost", port=5000, debug=True, reloader=True)
+    run(host="0.0.0.0", port=PORT, debug=True, reloader=True)
+    #run(host="localhost", port=5000, debug=True, reloader=True)
