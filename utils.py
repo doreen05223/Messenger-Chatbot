@@ -22,7 +22,7 @@ def send_text_message(id, text):
 def send_image_url(id, img_url):
     pass
 """
-def send_button_message(id):#, text, buttons):
+def send_button_message(id, text, button1, button2):
     url = "{0}/me/messages?access_token={1}".format(GRAPH_URL, ACCESS_TOKEN)
     text = {
       "attachment": {
@@ -30,18 +30,18 @@ def send_button_message(id):#, text, buttons):
         "payload": {
           "template_type": "generic",
           "elements": [{
-            "title": "Will you join the club?",
+            "title": text,#"Will you join the club?",
             "subtitle": "Tap a button to answer.",
             "buttons": [
               {
                 "type": "postback",
-                "title": "Yes!",
-                "payload": "yes",
+                "title": button1,#"Yes!",
+                "payload": "button1",
               },
               {
                 "type": "postback",
-                "title": "No!",
-                "payload": "no",
+                "title": button2,#"No!",
+                "payload": "button2",
               }
             ],
           }]
